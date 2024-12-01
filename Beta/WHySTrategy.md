@@ -1,0 +1,1 @@
+here we need to perform an action in differnt way in runtime. Object can choose the algorithm in runtime which one to process.SO Strategy pattern allows us to define a family of algorithm to encapsulate each one as a seperate class to  make the interchangable.
