@@ -1,7 +1,8 @@
 package Alpha;
 
-public class BasicCheckHandler implements FraudCheckHandler{
-    protected boolean handle(Tranaction transaction){
-        
+class BasicCheckHandler extends FraudCheckHandler {
+    @Override
+    protected boolean handle(Transaction transaction) {
+        return transaction.getAmount() > 0; 
     }
 }

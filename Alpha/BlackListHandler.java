@@ -1,7 +1,8 @@
 package Alpha;
 
-public class BlackListHandler {
-    protected boolean handle(Tranaction transaction){
-        
+class BlackListHandler extends FraudCheckHandler {
+    @Override
+    protected boolean handle(Transaction transaction) {
+        return !transaction.getMerchant().equalsIgnoreCase("blacklisted-merchant"); // Example
     }
 }

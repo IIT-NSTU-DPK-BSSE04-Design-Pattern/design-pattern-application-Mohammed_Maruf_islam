@@ -1,7 +1,8 @@
 package Alpha;
 
-public class HighRiskHandler {
-    protected boolean handle(Tranaction transaction){
-        
+class HighRiskHandler extends FraudCheckHandler {
+    @Override
+    protected boolean handle(Transaction transaction) {
+        return transaction.getAmount() < 10000; 
     }
 }

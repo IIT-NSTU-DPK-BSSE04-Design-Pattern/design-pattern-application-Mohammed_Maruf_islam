@@ -1,7 +1,7 @@
 package Alpha;
-
-public class GeoAnamolyHandler implements FraudCheckHandler{
-    protected boolean handle(Tranaction transaction){
-        
+class GeoAnamolyHandler extends FraudCheckHandler {
+    @Override
+    protected boolean handle(Transaction transaction) {
+        return !transaction.getLocation().equalsIgnoreCase("Chattogram"); 
     }
 }
